@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>AMIRA LUCKY SPIN</title>
+    <link href="./jquerysctipttop.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="participant_form">
+      <form id="participantForm" class="participant-form">
+        <!-- <label for="name">Name:</label> -->
+        <input
+          type="text"
+          placeholder="Name"
+          id="name"
+          name="name"
+          required
+        />
+        <!-- <label for="mobile">Mobile Number:</label> -->
+        <input
+          type="text"
+          placeholder="Mobile Number"
+          id="mobile"
+          name="mobile"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          name="email"
+          required
+        />
+        <!-- <button type="submit">Submit</button> -->
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    
+    <div class="mainbox hidebox" id="mainbox">
+      <div class="box" id="box">
+        <div class="box1">
+          <span class="font span1"><b>40% Off</b></span>
+          <span class="font span2"><b>Free Cloths</b></span>
+          <span class="font span3"><b>Tote Bag</b></span>
+          <span class="font span4"><b>Better Luck<br>Next Time</b></span>
+          <span class="font span5"><b>10% Off</b></span>
+        </div>
+        <div class="box2">
+          <span class="font span1"><b>20% Off</b></span>
+          <span class="font span2"><b>Calender</b></span>
+          <span class="font span3"><b>Wrist Band</b></span>
+          <span class="font span4"><b>Note Book</b></span>
+          <span class="font span5"><b>30% Off</b ></span
+          >
+        </div>
+      </div>
+      <button class="spin" onclick="spin()">SPIN</button>
+    </div>
+    <audio
+      controls="controls"
+      id="applause"
+      src="./applause.mp3"
+      type="audio/mp3"
+    ></audio>
+    <audio
+      controls="controls"
+      id="wheel"
+      src="./wheel.mp3"
+      type="audio/mp3"
+    ></audio>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>

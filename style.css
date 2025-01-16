@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+:root {
+  --spinnerColor3: content-box radial-gradient(#d2943a, #ffff81);
+  --spinnerColor2: #000;
+  --font1: #000;
+  --font2: #fff;
+}
+
+body {
+  font-family: Open Sans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('./images/ARKA-spin.jpg');
+  background-size: cover;
+}
+
+.participant-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input[type=text],
+select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email],
+select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #941350;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #cd0f68;
+}
+
+.mainbox {
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.mainbox:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: url(./arrow.png) no-repeat;
+  background-size: 14%;
+  left: 6%;
+  top: 44%;
+  transform: rotate(90deg);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 10px solid #b48909;
+  overflow: hidden;
+  transition: all ease-in-out 5s;
+  transform: rotate(90deg);
+}
+
+/* @media screen and (min-width: 480px) { 
+
+  .box {
+    width: 100%;
+    height: 50%;
+
+  }
+  
+} */
+
+span {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+}
+
+.span1 {
+  clip-path: polygon(0 17%, 0 50%, 50% 50%);
+  background: var(--spinnerColor2);
+}
+
+.span2 {
+  clip-path: polygon(0 17%, 38% 0, 50% 50%);
+  background: var(--spinnerColor3);
+}
+
+.span3 {
+  clip-path: polygon(33% 0, 71% 0, 50% 50%);
+  background: var(--spinnerColor2);
+}
+
+.span4 {
+  clip-path: polygon(71% 0, 100% 18%, 50% 50%);
+  background: var(--spinnerColor3);
+}
+
+.span5 {
+  clip-path: polygon(100% 18%, 100% 50%, 50% 50%);
+  background: var(--spinnerColor3);
+}
+
+.box1 .span5 {
+  background: var(--spinnerColor2);
+}
+
+.box2 .span3 {
+  background-color: var(--spinnerColor1);
+}
+
+.box2 {
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+.font {
+  color: white;
+  font-size: 20px;
+}
+
+
+
+.box1 .span1 b {
+  position: absolute;
+  top: 40%;
+  right: 65%;
+  transform: rotate(196deg);
+  text-align: center;
+  color:var(--font2);
+}
+
+.box1 .span2 b {
+  position: absolute;
+  top: 24%;
+  right: 57%;
+  transform: rotate(-130deg);
+}
+
+.box1 .span3 b {
+  position: absolute;
+  top: 20%;
+  right: 38%;
+  transform: rotate(-90deg);
+}
+
+.box1 .span4 b {
+  position: absolute;
+  top: 22%;
+  right: 18%;
+  transform: rotate(-45deg);
+}
+
+.box1 .span5 b {
+  position: absolute;
+  top: 40%;
+  right: 14%;
+  transform: rotate(-15deg);
+}
+
+.box2 .span1 {
+  background: var(--spinnerColor3);
+}
+
+.box2 .span1 b {
+  position: absolute;
+  top: 38%;
+  right: 70%;
+  transform: rotate(200deg);
+  color: var(--font2);
+}
+
+.box2 .span2 {
+  background: var(--spinnerColor2);
+}
+
+.box2 .span2 b {
+  position: absolute;
+  top: 21%;
+  right: 57%;
+  transform: rotate(-130deg);
+  text-align: center;
+}
+
+.box2 .span3 {
+  background: var(--spinnerColor3);
+}
+
+.box2 .span3 b {
+  position: absolute;
+  top: 17%;
+  right: 36%;
+  transform: rotate(270deg);
+  color: var(--font2);
+}
+
+.box2 .span4 b {
+  position: absolute;
+  top: 27%;
+  right: 25%;
+  transform: rotate(310deg);
+}
+
+.box2 .span4 {
+  background: var(--spinnerColor2);
+}
+
+.box2 .span5 b {
+  position: absolute;
+  top: 40%;
+  right: 18%;
+  transform: rotate(-20deg);
+  text-align: center;
+}
+
+.spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid #b48909;
+  background-color: gold;
+  color: #fff;
+  box-shadow: 0 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.spin:active {
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+}
+
+.mainbox.animate:after {
+  animation: animateArrow 0.7s ease infinite;
+}
+
+audio {
+  display: none;
+}
+
+@keyframes animateArrow {
+  50% {
+    right: -50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainbox {
+      width: 100%;
+      height: 46%;
+  }
+}
+
+.hidebox, .hideForm {
+  display: none;
+}
