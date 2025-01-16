@@ -109,10 +109,10 @@ function spin() {
     applause.play();
     swal("Dear Customer", "You Won " + SelectedItem + ".", "success");
 
-    const participantMobile = participantForm.mobile.value; // Get the participant's mobile number
+    const participantMobile = participantForm.mobile.value.trim(); // Get the participant's mobile number
     try {
       const response = await fetch(
-        "https://amira-lucky-spin-backend.onrender.com/api/participants/add-answer",
+        "https://amira-lucky-spin-backend.onrender.com/api/add-answer",
         {
           method: "POST",
           headers: {
@@ -137,9 +137,14 @@ function spin() {
 
       mainBox.classList.add("hidebox");
       participantForm.classList.remove("hideForm");
+      participantForm.reset()
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred while saving your spin result.");
+
+      mainBox.classList.add("hidebox");
+      participantForm.classList.remove("hideForm");
+      participantForm.reset()
     }
 
   }, 5500);
