@@ -29,7 +29,7 @@ participantForm.addEventListener("submit", async (e) => {
 
   try {
     const response = await fetch(
-      "https://amira-quiz-backend.onrender.com/api/participants",
+      "https://amira-lucky-spin-backend.onrender.com/api/participants",
       {
         method: "POST",
         headers: {
