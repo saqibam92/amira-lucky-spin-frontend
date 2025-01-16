@@ -134,6 +134,9 @@ function spin() {
       }
 
       console.log("Spin result saved successfully!");
+
+      mainBox.classList.add("hidebox");
+      participantForm.classList.remove("hideForm");
     } catch (error) {
       console.error("Error:", error);
       alert("An error occurred while saving your spin result.");
