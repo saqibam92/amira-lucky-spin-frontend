@@ -107,7 +107,7 @@ function spin() {
   // Display popup alert
   setTimeout(async function () {
     applause.play();
-    swal("Dear Customer", "You Won " + SelectedItem + ".", "success");
+   // swal("Dear Customer", "You Won " + SelectedItem + ".", "success");
 
     const participantMobile = participantForm.mobile.value.trim(); // Get the participant's mobile number
     try {
