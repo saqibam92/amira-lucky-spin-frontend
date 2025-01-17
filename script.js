@@ -66,12 +66,12 @@ function spin() {
   let SelectedItem = "";
 
   // Unique angles for each prize
-  const ToteBag = shuffle([1890, 2250, 2610]);
+  const ToteBag = shuffle([2250]);
   const BetterLuckNextTime = shuffle([1850, 2210, 2570, 2930, 3290, 3650])
   const noteBook =shuffle([2750, 3110, 3470, 3830, 4190, 4550]);
   const A10Off = shuffle([1810, 2170, 2530, 2890, 3250, 3610]);
   const a20perecentOff = shuffle([1770, 2130]);
-  const A30Off = shuffle([3790, 4150]);
+  const A15Off = shuffle([3790, 4150]);
   const calender = shuffle([2830, 3190, 3550, 3910]);  
 
   // Create a results array without duplicating values
@@ -81,7 +81,7 @@ function spin() {
     A10Off[0],
     a20perecentOff[0],
     calender[0],
-    A30Off[0],
+    A15Off[0],
     noteBook[0]
   ]);
 
@@ -92,7 +92,7 @@ function spin() {
   else if (calender.includes(results[0])) SelectedItem = "Calender";
   else if (a20perecentOff.includes(results[0])) SelectedItem = "20% Off";
   else if (A10Off.includes(results[0])) SelectedItem = "10% Off";
-  else if (A30Off.includes(results[0])) SelectedItem = "30% Off";
+  else if (A15Off.includes(results[0])) SelectedItem = "15% Off";
   else if (ToteBag.includes(results[0])) SelectedItem = "Tote Bag";
   else if (noteBook.includes(results[0])) SelectedItem = "Note Book";
 
